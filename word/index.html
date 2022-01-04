@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Ivalingo Word Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/03abc70cb1.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- <script type="text/javascript" src="file:///C:/Users/darcy/OneDrive/Documents/.other/code/js/fortissimo/index.js"></script> -->
+    <script type="text/javascript" src="https://fortissimojs.github.io/index.js"></script>
+    <script type="text/javascript" src="pronounce.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+  </head>
+
+  <body onload="init()" onfocus="focus()">
+
+    <h1>
+      <span id="word"></span>
+      <span id="last"></span>
+      <span class="underscore">_</span>
+    </h1>
+    <h2 class="ipa">
+      <pronounce id="ipa_t" class="narrow"></pronounce>
+      <pronounce id="ipa_s" class="broad"></pronounce>
+    </h2>
+    <br>
+    <div id="valid"></div>
+    <section class="bottom">
+      <button onclick="copy()">Copy</button>
+      <button onclick="clearWord()">Clear</button>
+      <button onclick="randomWord()">Random Word</button>
+    </section>
+  </body>
+
+</html>
