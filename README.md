@@ -1,7 +1,13 @@
 # Ivalingo
 
-Ivalingo /ivaˈliŋgo/ is an International Auxillary Language modelled after Esperanto.
+Ivalingo /ivaˈliŋgo/ is an International Auxillary Language modelled after Esperanto. The name means 'some kind of language' (`eo` ia lingvo).
 
+Goal:
+- To be able to be used as a common language between people across the world.
+- To be easy to learn from all languages, especially Esperanto.
+- To be simpler, less Eurocentric, and less sexist than Esperanto.
+
+Source:
 - Phonemic inventory: Extension of Toki Pona, inspired by Esperanto and other IALs
 - Phonotactics: From scratch, based loosely on Esperanto
 - Grammar (and basic vocab): From Esperanto
