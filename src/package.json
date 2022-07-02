@@ -1,0 +1,14 @@
+{
+  "name": "ivalingo-compile",
+  "main": "compile.ts",
+  "scripts": {
+    "start": "ts-node compile.ts",
+    "dev": "nodemon -x ts-node compile.ts --watch main.md"
+  },
+  "dependencies": {
+    "@types/node": "^18.0.0",
+    "fortissimo": "^0.2.15",
+    "typescript": "^4.7.4",
+    "word-definition": "^2.1.6"
+  }
+}

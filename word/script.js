@@ -1,185 +1,74 @@
-var word = "";
-var valid = "";
-
 function init() {
-  randomWord();
+  $("#words").html(new Array(20).fill(null).map(generateWord).join("<br />"));
 }
 
-function input(e) {
-  if (e.key === "Enter") {
-    randomWord();
-  } else if (e.key === "Backspace") {
-    if (e.ctrlKey) {
-      word = "";
-    } else {
-      word = word.slice(0, -1);
-    }
-  } else if (!e.altKey && !e.metaKey && e.key.length === 1) {
-    if (e.ctrlKey) {
-      if (e.key === "c") {
-        copy();
-      } else if (e.key === "x") {
-        clearWord();
-      }
-    } else {
-      addLetter(e.key.toLowerCase());
-    }
-  }
-  change();
-}
-addEventListener("keydown", input);
+// Letter classes
+const letters = "abcdefgijklmnopstuvwz"; // All letters
+const consonants = "pbtdkgmnfvszcwjl".split(""); // All consonants
+const slides = "sc"; // s-like
+const slideValids = "ptkfwl"; // Consonants compatible with slides before
+const semivowels = "wj"; // Diphthong-final semivowels
+const noSemivowels = "pbtdkgmnfvszcl"; // Consonants except w,j
+const coda = "nml"; // Coda consonants (Nasals + l)
+const vowels = "i,u,e,o,a,ej,aj,oj,aw".split(",");
+const suffixes = "i,u,e,o,a,on,ojn,en,is,as,os,us".split(","); // PoS suffixes
 
-function change() {
-  getValid();
-  word = word.slice(0, 50);
-  $("#word").text("");
-  if (word) {
-    $("#word").text(word);
-  }
-  $("#last").text("");
-  if (!"iuan".includes(word.slice(-1))) {
-    if (word.slice(-1)[0] === "w") {
-      $("#last").text("u");
-    } else {
-      $("#last").text("a");
+function generateWord() {
+  // Any letter (Initial syllable)
+  var word = F.randomChoice(letters);
+
+  for (var i = 0; i < F.randomInt(1, 4); i++) {
+    // Possibly add slide if was vowel (Not word-initial)
+    if (i && vowels.includes(lastPhoneme(word)) && randomPass()) {
+      word += F.randomChoice(slides);
+    }
+    // Possibly add slide-valid consonant if was slide
+    if (slides.includes(lastPhoneme(word)) && randomPass()) {
+      word += F.randomChoice(slideValids);
+    }
+    // Must add vowel if was consonant
+    if (consonants.includes(lastPhoneme(word))) {
+      word += F.randomChoice(removeSimilarVowels(vowels, lastPhoneme(word)));
+    }
+    // Possibly add coda
+    if (randomPass()) {
+      word += F.randomChoice(coda);
     }
   }
 
-  var ipa = formatPronounce($("#word").text() + $("#last").text());
-  $("#ipa_t").text(ipa.t || " ");
-  $("#ipa_s").text(ipa.s || " ");
-}
-
-function maxLength(text) {
-  var split = text.split(/[iua]/);
-  if (split.length > 3) {
-    return text.slice(
-      0,
-      split
-        .slice(
-          0,
-          3 + (text.startsWith("sa") && !text.startsWith("san") ? 1 : 0),
-        )
-        .join("_").length +
-        (split.slice(-1)[0][0] === "n" ? 1 : 0) +
-        1,
-    );
-  }
-  return text;
-}
-
-function addLetter(letter) {
-  getValid();
-  if (valid.includes(letter)) {
-    word += letter;
-  } else if ("iua".includes(letter) && letter === word.slice(-1)) {
-    if (valid.includes("-")) {
-      word += "-";
-    }
-  }
-  word = maxLength(word);
-}
-
-function getValid() {
-  temp = "";
-  if (word.length === 0) {
-    // Start of word
-    temp = "btvskwl"; // Consonants
-  } else {
-    if ("iua".includes(word.slice(-1))) {
-      // Vowels
-      temp += "btvskwln"; // Consonants, Nasal
-    } else if ("vwl".includes(word.slice(-1))) {
-      // Consonants (Not Cwu compatible)
-      temp += "iua"; // Vowels
-    } else if ("btsk".includes(word.slice(-1))) {
-      // Consonants (Cwu compatible)
-      temp += "iua"; // Vowels
-      if (word.split(/[btvskl]+w/).length < 2) {
-        temp += "w"; // W
-      }
-    } else if ("n".includes(word.slice(-1))) {
-      // Nasals
-      temp += "btvskwl"; // Consonants
-    }
+  // Add consonant if was vowel
+  if (vowels.includes(lastPhoneme(word))) {
+    word += F.randomChoice(noSemivowels);
   }
 
-  valid = "";
-  for (var i in temp) {
-    // Cannot be over limit
-    if (maxLength(word + temp[i]).length === word.length + 1) {
-      // Vowel harmomy
-      if (
-        !(temp[i] === "i" && word.includes("u")) &&
-        !(temp[i] === "u" && word.includes("i"))
-      ) {
-        valid += temp[i];
-      }
-    }
+  // Add suffix
+  return word + F.randomChoice(suffixes);
+}
+
+// Remove w/j if phoneme is u/i respectively
+function removeSimilarVowels(vowels, consonant) {
+  if (consonant === "w") {
+    return vowels.filter(i => i?.[0] !== "u");
   }
-
-  showValid();
-}
-
-function showValid() {
-  cols = {
-    consonant: "",
-    vowel: "",
-    nasal: "",
-    unknown: "",
-  };
-  types = {
-    consonant: "btvskwl",
-    vowel: "iua",
-    nasal: "n",
-  };
-
-  valid.split("").forEach(i => {
-    var type = "unknown";
-    for (j in types) {
-      if (types[j].includes(i)) {
-        type = j;
-      }
-    }
-
-    if (type) {
-      cols[type] += `
-        <li class="${type}">
-          ${i}
-        </li>
-      `;
-    }
-  });
-
-  str = "";
-  for (i in cols) {
-    str += cols[i]
-      ? `
-      <ul>
-        ${cols[i]}
-      </ul>
-      `
-      : "";
+  if (consonant === "j") {
+    return vowels.filter(i => i?.[0] !== "i");
   }
-  $(`#valid`).html(str);
+  return vowels;
 }
 
-function randomWord() {
-  word = "";
-  length = F.randomInt(4, 10);
-  for (var i = 0; i < length; i++) {
-    addLetter(F.randomChoice(valid));
-    change();
+// Get last phoneme of string
+function lastPhoneme(string) {
+  // Check for diphthong
+  if (
+    semivowels.includes(string.slice(-1)[0]) &&
+    vowels.includes(string.slice(-2)[0])
+  ) {
+    return string.slice(-2);
   }
-  word += $("#last").text() || "";
-  change();
+  return string.slice(-1);
 }
 
-function copy() {
-  F.copy($("#word").text() + $("#last").text());
-}
-
-function clearWord() {
-  word = "";
-  change();
+// Random equal chance true or false
+function randomPass() {
+  return Math.random() < 0.5;
 }

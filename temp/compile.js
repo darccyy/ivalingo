@@ -1,16 +1,16 @@
 var then = Date.now();
 const fs = require("fs");
 const wd = require("word-definition");
-const formatPronounce = require("./word/pronounce.js");
+const formatPronounce = require("./pronounce.js");
 
 (async () => {
   console.log("Compiling files");
-  var main = fs.readFileSync(__dirname + "/src/main.md").toString();
-  var style = fs.readFileSync(__dirname + "/src/style.css").toString();
+  var main = fs.readFileSync(__dirname + "/main.md").toString();
+  var style = fs.readFileSync(__dirname + "/style.css").toString();
 
   console.log("Formatting dictionary\n");
 
-  var file = fs.readFileSync(__dirname + "/src/dictionary.md").toString();
+  var file = fs.readFileSync(__dirname + "/dictionary.md").toString();
   file = file.split("\r\n\r\n");
 
   // var alph = "btknvswliua";
@@ -79,7 +79,7 @@ const formatPronounce = require("./word/pronounce.js");
       }
       english = temp.join(", ");
     } else {
-      english = "[No English equivelent]";
+      english = "[No English equivalent]";
     }
 
     def = item.def;
@@ -141,7 +141,7 @@ ${def}
 
   console.log("\nFormatting Sentences");
   var sentences = fs
-    .readFileSync(__dirname + "/src/sentences.md")
+    .readFileSync(__dirname + "/sentences.md")
     .toString()
     .split("\r\n")
     .join("\n")
@@ -182,7 +182,7 @@ ${last}
 
   console.log("Exporting README");
   fs.writeFileSync(
-    __dirname + "/README.md",
+    __dirname + "/../README.md",
     main +
       "\n\n# Example Sentences\n\n" +
       sentences +
