@@ -13,7 +13,6 @@ const sentences = "[empty...]";
 
 console.log("Compiling files...");
 const main = fs.readFileSync(__dirname + "/main.md").toString();
-const style = fs.readFileSync(__dirname + "/style.css").toString();
 
 fs.writeFileSync(
   __dirname + "/../README.md",
