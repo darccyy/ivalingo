@@ -3,9 +3,9 @@
 Ivalingo /ivaˈliŋgo/ is an International Auxillary Language modelled after Esperanto. The name means 'some kind of language' (`eo` ia lingvo).
 
 Goal:
-- To be able to be used as a common language between people across the world.
-- To be easy to learn from all languages, especially Esperanto.
-- To be simpler, less Eurocentric, and less sexist than Esperanto.
+- To be able to be used as a common language between people across the world
+- To be easy to learn from all languages, especially Esperanto
+- To be simpler, less Eurocentric, and less sexist than Esperanto
 
 Source:
 - Phonemic inventory: Extension of Toki Pona, inspired by Esperanto and other IALs
@@ -50,12 +50,14 @@ Source:
     - [Verb](#verb)
     - [Adjective](#adjective)
     - [Adverb](#adverb)
+  - [Pronouns](#pronouns)
   - [Affirmative and Negative](#affirmative-and-negative)
   - [Interrogative particle (ĉu)](#interrogative-particle-ĉu)
   - [Correlatives](#correlatives)
   - [Prefix](#prefix)
   - [Suffix](#suffix)
   - [Articles](#articles)
+  - [Affixes](#affixes)
 - [Vocabulary](#vocabulary)
   - [Source languages](#source-languages)
   - [Country, Language Names](#country-language-names)
@@ -98,7 +100,7 @@ Source:
 | Approximant |    `w`    |    `l`    |       `j`       |
 
 Nasals can be pronounced with place of articulation of following consonant (assimilated).
-Eg. lingo `/liŋgo/`
+- Eg. lingo `/liŋgo/`
 
 ## Vowels
 
@@ -122,7 +124,7 @@ Standard 5 vowel system
 
 ## Syllable Structure
 
-$\langle ((s|c) C) V (n|m|l) \rangle$ - Simplified: ❬(C)(C)V(C)❭
+$\langle ((s|c) C) V (n|m|l) \rangle$ - Simplified: ❬(C)(C)V(C)❭ (!=)
 
 1. ❬V❭ includes diphthongs (❬w,j❭ are included in vowel)
 2. No [repeated consonants](#repeated-consonants)
@@ -135,24 +137,22 @@ $\langle ((s|c) C) V (n|m|l) \rangle$ - Simplified: ❬(C)(C)V(C)❭
 
 ## Repeated Consonants
 
-No repeated consonants are valid.
+No repeated consonants are valid. (!=)
 
 For affixes, separate with ❬a❭ if required.
-
 - Eg. ❬mal + longa❭ -> ❬malalonga❭
 
 For compound words, separate with appropriate [PoS](#parts-of-speech) suffix.
-
 - Eg. ❬viv + vespero❭ (vespero de viv**o**) -> ❬vivovespero❭
 
 ## Repeated Vowels
 
-No repeated vowels are valid, except ❬ia❭ (including diphthongs ❬iaj❭, ❬iaw❭)
+No repeated vowels are valid, except ❬ia❭ (including diphthongs ❬iaj❭, ❬iaw❭). (!=)
 
 ## Stress
 
-Penultimate syllable (Second last).
-Eg. ❬ivalingo❭ = ❬iva**LIN**go❭
+Penultimate syllable (Second last). (==)
+- Eg. ❬ivalingo❭ = ❬iva**LIN**go❭
 
 # Loan word conversion
 
@@ -176,7 +176,7 @@ Slashes represent alternate options.
 # Orthography
 
 Latin alphabet except ❬h, q, r, x, y❭.
-Capital letters for proper nouns, including people, places, organizations and languages; and for the start of a sentence. Capital letters are optional, but recommended.
+Capital letters for proper nouns, including people, places, organizations and languages; and for the start of a sentence. Capital letters are optional, but recommended. (~=)
 
 <!-- ## Punctuation -->
 
@@ -188,9 +188,12 @@ Most parts of speech (PoS) are marked for type.
 
 ### Noun
 
-Suffix: ❬-o❭
+Suffix: ❬-o❭ (==)
 
-Inflect for number ❬-j❭ and case ❬-n❭
+Inflect for number ❬-j❭ and case ❬-n❭. (==)
+
+To mark genitive case, use ❬de❭ preposition. (==)
+- Eg. `en` the teacher's car `eo` la aŭto de la intruisto `iv` awto de instulisto
 
 ### Verb
 
@@ -204,30 +207,51 @@ Suffixes: (==)
 
 ### Adjective
 
-Suffix: ❬-a❭
+Suffix: ❬-a❭ (==)
 
-Adjectives are not marked for inherited number case (!=)
+Adjectives are not marked for inherited number case. (!=)
 
 ### Adverb
 
-Suffix: ❬-e❭
+Suffix: ❬-e❭ (==)
 
-Add ❬-n❭ suffix for motion (==)
+Add ❬-n❭ suffix for motion. (==)
 
-<!-- - Past -->
+## Pronouns
 
-<!-- ## Pronouns -->
+|             | Singular | Plural |
+| ----------- | :------: | :----: |
+| First       |    mi    |  emi   |
+| Second      |    vi    | (evi)  |
+| Third       |    li    |  eli   |
+| (Masculine) |   ici    |        |
+| (Feminine)  |   ini    |        |
+| (Inanimate) |    di    |        |
+| Indefinite  |   oni    |        |
+| Reflexive   |    si    |        |
+
+> ❬emi❭ is by default inclusively ambiguous, and can be specified inclusive with ❬vemi❭ (!=)
+
+> ❬evi❭ can be used as second person plural if distinction between ❬vi❭ is necessary (!=)
+
+> Third person pronouns are by default epicene, and can be specified as masculine ❬ici❭, feminine ❬ini❭, or inanimate ❬di❭ (~=)
+
+> The reflexive ❬si❭ refers to the subject of a clause (==)
+
+> The indefinite ❬oni❭ is used like English 'you' or 'they' (indefinite) (==)
+
+> All pronouns can take ❬-n❭ for accusative case and ❬-a❭ suffix for genitive (possessive) case (==)
 
 ## Affirmative and Negative
 
-- Yes, Jes = ❬si❭
-- No, Ne = ❬ne❭
+- `en` yes `eo` jes `iv` ❬si❭ (!=)
+- `en` no `eo` ne `iv` ❬ne❭ (==)
 
 ## Interrogative particle (ĉu)
 
 There are two interrogative particles, ❬cu❭ for closed (yes/no) questions, and ❬cun❭ for open question.
 This is usually expressed with tone in English.
-Both are translated as 'ĉu' in Esperanto.
+Both are translated as 'ĉu' in Esperanto. (~=)
 
 Eg:
 
@@ -242,13 +266,13 @@ Eg:
 
 ## Correlatives
 
-- Generality: ajn (after word)
+- Generality: ajn (after word) (==)
 - - Eg. `en` whatever, `eo` kio ajn, `iv` iko ajn
-- Proximity: t(i)-
+- Proximity: t(i)- (~=)
 - - Eg. `en` this (thing), `eo` tio, `iv` tato
-- Distance: fol (after word)
+- Distance: fol (after word) (==)
 - - Eg. `en` yonder, `eo` tie for, `iv` ate fol
-- Association: de (before word)
+- Association: de (before word) (!=)
 - - Eg. `en` whose, `eo` kies, `iv` de kiulo (of who)
 
 ## Prefix
@@ -288,12 +312,6 @@ Eg:
 | Single        | iku           | atu        | ivu        | afu       | nenu     | alu   |
 | Demonstrative | ikan          | atan       | ivan       | afan      | nenan    | alan  |
 
-<!-- ### Number -->
-
-<!-- #### Whether -->
-
-<!-- ### Possession -->
-
 <!-- ## Sentence Structure -->
 
 <!-- ### Clause Structure -->
@@ -306,11 +324,25 @@ Eg:
 
 Definite article 'la', but optional. (~=)
 
-<!-- ## Affixes -->
+## Affixes
+
+| `iv` | `eo` | `en`                              |
+| ---- | ---- | --------------------------------- |
+| -n   | =    | Accusative case, Motion (adverbs) |
+| -j   | =    | Plural                            |
+| -o   | =    | Noun                              |
+| -a   | =    | Adjective                         |
+| -e   | =    | Adverb                            |
+| -is  | =    | Verb past tense                   |
+| -as  | =    | Verb present tense                |
+| -os  | =    | Verb future tense                 |
+| -i   | =    | Verb infinitive                   |
+| -u   | =    | Verb imperative                   |
+| -us  | =    | Verb conditional                  |
+| -in  | =    | Feminine                          |
+| -ic  | -iĉ  | Masculine                         |
 
 # Vocabulary
-
-[not defined]
 
 ## Source languages
 
@@ -322,7 +354,7 @@ Definite article 'la', but optional. (~=)
 
 ## Country, Language Names
 
-All use endonyms
+All use endonyms (!=)
 
 - Country name: -o
 - - `en` England
@@ -330,7 +362,7 @@ All use endonyms
 - - `iv` Inglo
 
 - Person in country (living / citizen): -ano
-- - `en` English person (living in England
+- - `en` English person (living in England)
 - - `eo` anglo
 - - `iv` Inglano
 
@@ -344,7 +376,7 @@ All use endonyms
 - - `eo` angla
 - - `iv` Ingla
 
-Language name not derived from country
+Language name not derived from country (!=)
 
 - Language: -o
 - - `en` English
