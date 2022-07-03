@@ -137,6 +137,7 @@ $\langle ((s|c) C) V (n|m|l) \rangle$ - Simplified: ❬(C)(C)V(C)❭ (!=)
 6. ❬(s,c)❭ can only appear before ❬p,t,k,f,w,l❭
 7. ❬n❭ cannot appear before ❬p,b❭ (Use ❬m❭), and ❬m❭ cannot appear before ❬t,d,s,z,f,v❭ (Use ❬n❭)
 8. ❬n,m,l❭ cannot appear before ❬w,j❭
+9. Coda consonant can be any consonant except ❬w,j❭
 
 ## Repeated Consonants
 
