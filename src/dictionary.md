@@ -1,35 +1,11 @@
-# Dictionary
+lingo
+- noun
+- lingvo;language
 
-## # dictionary
+awto
+- noun
+- aŭto;car
 
-
-
-### created by [darcy](https://github.com/darccyy) (`/dɐːsi/` satasi)
-
-<style>
-
-table {
-
-Traditional: `[undefined]`
-
-Simplified `/undefined/`
-
-*}
-
-</style>*
-
-**English:** '  text-align: center;'
-
-*[No Definition]*
-
----
-
-### Created by [darcy](https://github.com/darccyy) (`/dɐːsi/` Satasi)
-
-<style>
-
-table {
-  text-align: center;
-}
-
-</style>
+ulo
+- noun
+- ulo,homo,viro;person,human

@@ -3,7 +3,7 @@
   "main": "compile.ts",
   "scripts": {
     "start": "ts-node compile.ts",
-    "dev": "nodemon -x ts-node compile.ts --watch main.md"
+    "dev": "nodemon -x ts-node compile.ts"
   },
   "dependencies": {
     "@types/node": "^18.0.0",

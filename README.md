@@ -39,10 +39,11 @@ Source:
 - [Phonotactics](#phonotactics)
   - [Syllable Structure](#syllable-structure)
   - [Repeated Consonants](#repeated-consonants)
-  - [Repeated Vowels](#repeated-vowels)
+  - [Sequential Vowels](#sequential-vowels)
   - [Stress](#stress)
-- [Loan word conversion](#loan-word-conversion)
+- [Loan Word Conversion](#loan-word-conversion)
   - [Phonemes](#phonemes)
+  - [Phonotactics](#phonotactics-1)
 - [Orthography](#orthography)
 - [Grammar](#grammar)
   - [Parts of Speech](#parts-of-speech)
@@ -52,14 +53,16 @@ Source:
     - [Adverb](#adverb)
   - [Pronouns](#pronouns)
   - [Affirmative and Negative](#affirmative-and-negative)
-  - [Interrogative particle (ĉu)](#interrogative-particle-ĉu)
+  - [Interrogative Particle](#interrogative-particle)
   - [Correlatives](#correlatives)
   - [Prefix](#prefix)
   - [Suffix](#suffix)
+  - [Sentence Structure](#sentence-structure)
+  - [Compound Words](#compound-words)
   - [Articles](#articles)
   - [Affixes](#affixes)
 - [Vocabulary](#vocabulary)
-  - [Source languages](#source-languages)
+  - [Source Languages](#source-languages)
   - [Country, Language Names](#country-language-names)
 - [Example Sentences](#example-sentences)
 - [Dictionary](#dictionary)
@@ -145,16 +148,16 @@ For affixes, separate with ❬a❭ if required.
 For compound words, separate with appropriate [PoS](#parts-of-speech) suffix.
 - Eg. ❬viv + vespero❭ (vespero de viv**o**) -> ❬vivovespero❭
 
-## Repeated Vowels
+## Sequential Vowels
 
-No repeated vowels are valid, except ❬ia❭ (including diphthongs ❬iaj❭, ❬iaw❭). (!=)
+No sequential vowels are valid, except ❬ia❭ (including diphthongs ❬iaj❭, ❬iaw❭). (!=)
 
 ## Stress
 
 Penultimate syllable (Second last). (==)
 - Eg. ❬ivalingo❭ = ❬iva**LIN**go❭
 
-# Loan word conversion
+# Loan Word Conversion
 
 ## Phonemes
 
@@ -171,7 +174,10 @@ Slashes represent alternate options.
 | Approximant    |  (w)   |               | (w / l)  |               |    (l)    |     j      |  (w)   |        |          |
 | L. Approximant |        |               |    l     |               |    (l)    |    (j)     |  (w)   |        |          |
 
-<!-- ## Phonotactics -->
+## Phonotactics
+
+Remove invalid consonants from a cluster until it fits.
+Either remove sequential vowels, or add ❬l❭ between.
 
 # Orthography
 
@@ -247,7 +253,7 @@ Add ❬-n❭ suffix for motion. (==)
 - `en` yes `eo` jes `iv` ❬si❭ (!=)
 - `en` no `eo` ne `iv` ❬ne❭ (==)
 
-## Interrogative particle (ĉu)
+## Interrogative Particle
 
 There are two interrogative particles, ❬cu❭ for closed (yes/no) questions, and ❬cun❭ for open question.
 This is usually expressed with tone in English.
@@ -312,17 +318,18 @@ Eg:
 | Single        | iku           | atu        | ivu        | afu       | nenu     | alu   |
 | Demonstrative | ikan          | atan       | ivan       | afan      | nenan    | alan  |
 
-<!-- ## Sentence Structure -->
+## Sentence Structure
 
-<!-- ### Clause Structure -->
+Clause and sentence structure same as Esperanto. (==)
 
-<!-- ### Complex Sentence -->
+## Compound Words
 
-<!-- ### Compound words -->
+Compound words are head final. (==)
+Must fit [phonotactic](#phonotactics) constraints
 
 ## Articles
 
-Definite article 'la', but optional. (~=)
+Definite article ❬la❭, but optional. (~=)
 
 ## Affixes
 
@@ -344,7 +351,7 @@ Definite article 'la', but optional. (~=)
 
 # Vocabulary
 
-## Source languages
+## Source Languages
 
 - English
 - Mandarin Chinese
@@ -399,6 +406,42 @@ Language name not derived from country (!=)
 
 # Dictionary
 
-[empty...]
+---
+
+## awto
+
+*noun*
+
+`eo` *aŭto*
+
+`en` *car*
+
+A wheeled vehicle that moves independently, with at least three wheels, powered mechanically, steered by a driver and mostly for personal transportation.
+
+---
+
+## lingo
+
+*noun*
+
+`eo` *lingvo*
+
+`en` *language*
+
+A body of words, and set of methods of combining them (called a grammar), understood by a community and used as a form of communication.
+
+---
+
+## ulo
+
+*noun*
+
+`eo` *ulo*, *homo*, *viro*
+
+`en` *person*, *human*
+
+An individual; usually a human being.
+
+---
 
 > Created by [darcy](https://github.com/darccyy)
