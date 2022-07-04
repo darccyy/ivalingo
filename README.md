@@ -199,6 +199,8 @@ Suffix: ❬-o❭ (==)
 
 Inflect for number ❬-j❭ and case ❬-n❭. (==)
 
+The accusative suffix ❬-n❭ must be used also for subject of copulas. (!=)
+
 To mark genitive case, use ❬de❭ preposition. (==)
 - Eg. `en` the teacher's car `eo` la aŭto de la intruisto `iv` awto de instulisto
 
@@ -223,6 +225,11 @@ Adjectives are not marked for inherited number case. (!=)
 Suffix: ❬-e❭ (==)
 
 Add ❬-n❭ suffix for motion. (==)
+
+<!-- ## Tense -->
+
+<!-- ### Complex Tense -->
+
 
 ## Pronouns
 
@@ -349,6 +356,8 @@ Definite article ❬la❭, but optional. (~=)
 | -us  | =    | Verb conditional                  |
 | -in  | =    | Feminine                          |
 | -ic  | -iĉ  | Masculine                         |
+
+<!-- # Numbers -->
 
 # Vocabulary
 
